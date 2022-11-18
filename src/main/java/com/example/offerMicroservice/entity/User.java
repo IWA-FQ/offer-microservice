@@ -1,4 +1,4 @@
-package com.example.microservicetemplate.entity;
+package com.example.offerMicroservice.entity;
 
 import javax.persistence.*;
 
