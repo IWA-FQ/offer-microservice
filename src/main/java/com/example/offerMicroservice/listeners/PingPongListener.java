@@ -10,7 +10,7 @@ public class PingPongListener
 {
 
     Logger LOG = LoggerFactory.getLogger(PingPongListener.class);
-    @KafkaListener(topics = "ping")
+    @KafkaListener(topics = "offerState")
     void listener(String data) {
         LOG.info(data);
     }
