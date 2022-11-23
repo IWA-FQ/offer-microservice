@@ -1,4 +1,4 @@
-package com.example.offerMicroservice.listeners;
+package com.polylink.offerMicroservice.listeners;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,7 +1,7 @@
-package com.example.offerMicroservice.services;
+package com.polylink.offerMicroservice.services;
 
-import com.example.offerMicroservice.entity.Offer;
-import com.example.offerMicroservice.repositories.OfferRepository;
+import com.polylink.offerMicroservice.entity.Offer;
+import com.polylink.offerMicroservice.repositories.OfferRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

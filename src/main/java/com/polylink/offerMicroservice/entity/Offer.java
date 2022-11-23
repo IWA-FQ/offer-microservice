@@ -1,4 +1,4 @@
-package com.example.offerMicroservice.entity;
+package com.polylink.offerMicroservice.entity;
 
 import javax.persistence.*;
 import java.util.Date;
