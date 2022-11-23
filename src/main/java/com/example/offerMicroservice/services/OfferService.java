@@ -25,8 +25,8 @@ public class OfferService {
      * @param id_employer
      * @return all the offers created by an employer
      */
-    public List<Offer> getAllOffersByEmployer(String id_employer) {
-        return offerRepository.findOffersByEmployer(id_employer);
+    public List<Offer> getAllOffersByEmployer(Integer id_employer) {
+        return offerRepository.findOffersByIdEmployer(id_employer);
     }
 
     /**
@@ -51,6 +51,6 @@ public class OfferService {
      * @param id_offer
      */
     public void deleteOfferById(Integer id_offer){
-        offerRepository.deleteById(id_offer);
+        offerRepository.deleteOfferById(id_offer);
     }
 }

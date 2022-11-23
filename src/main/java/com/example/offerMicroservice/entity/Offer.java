@@ -8,6 +8,7 @@ import java.util.Date;
 public class Offer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"id_offer\"")
     private Integer id;
     @Column(name = "title")
     private String title;
@@ -17,6 +18,8 @@ public class Offer {
     private Date start_date;
     @Column(name = "end_date")
     private Date end_date;
+    @Column(name = "keywords")
+    private String keywords;
     @Column(name = "city")
     private String city;
     @Column(name = "city_code")
@@ -27,8 +30,8 @@ public class Offer {
     private Double salary;
     @Column(name = "advantage")
     private String advantage;
-    @Column(name = "employer")
-    private String employer;
+    @Column(name = "id_employer")
+    private Integer idEmployer;
 
     public Integer getId() {
         return id;
@@ -36,6 +39,14 @@ public class Offer {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getIdEmployer() {
+        return idEmployer;
+    }
+
+    public void setIdEmployer(Integer idEmployer) {
+        this.idEmployer = idEmployer;
     }
 
     public String getTitle() {
@@ -110,28 +121,20 @@ public class Offer {
         this.advantage = advantage;
     }
 
-    public String getEmployer() {
-        return employer;
-    }
-
-    public void setEmployer(String employer) {
-        this.employer = employer;
-    }
-
     @Override
     public String toString() {
         return "Offer{" +
-                "id=" + id +
-                ", title='" + title +
-                ", description='" + description +
-                ", start_date='" + start_date +
-                ", end_date='" + end_date +
-                ", city='" + city +
-                ", city_code='" + city_code +
-                ", nb_positions='" + nb_positions +
-                ", salary='" + salary +
-                ", advantage='" + advantage +
-                ", employer='" + employer +
+                "id=" + this.getId() +
+                ", title='" + this.getTitle() +
+                ", description='" + this.getDescription() +
+                ", start_date='" + this.getStart_date() +
+                ", end_date='" + this.getEnd_date() +
+                ", city='" + this.getCity() +
+                ", city_code='" + this.getCity_code() +
+                ", nb_positions='" + this.getNb_positions() +
+                ", salary='" + this.getSalary() +
+                ", advantage='" + this.getAdvantage() +
+                ", id_employer='" + this.getIdEmployer() +
                 '}';
     }
 }
