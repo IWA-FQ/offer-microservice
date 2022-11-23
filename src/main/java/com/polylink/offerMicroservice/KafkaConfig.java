@@ -1,4 +1,4 @@
-package com.example.offerMicroservice;
+package com.polylink.offerMicroservice;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.common.config.TopicConfig;
