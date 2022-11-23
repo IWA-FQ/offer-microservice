@@ -32,19 +32,19 @@ public class OfferController
         return offerService.getAllOffers();
     }
     @GetMapping("/api/offer/{id_offer}")
-    public Offer getOffer(@PathVariable("id_offer") Integer id) {
-        return offerService.getOfferById(id);
+    public Offer getOffer(@PathVariable("id_offer") Integer id_offer) {
+        return offerService.getOfferById(id_offer);
     }
     @GetMapping("/api/offer/employer/{id_employer}")
-    public List<Offer> getAllOffersByEmployer(@PathVariable("id_employer") String id) {
-        return offerService.getAllOffersByEmployer(id);
+    public List<Offer> getAllOffersByEmployer(@PathVariable("id_employer") Integer id_employer) {
+        return offerService.getAllOffersByEmployer(id_employer);
     }
     @PostMapping("/api/offer/{id_offer}")
     public void postOffer(@RequestBody Offer offer) {
         offerService.updateOffer(offer);
     }
     @DeleteMapping("/api/offer/{id_offer}")
-    public void deleteOffer(@PathVariable("id_offer") Integer id) {
-        offerService.deleteOfferById(id);
+    public void deleteOffer(@PathVariable("id_offer") Integer id_offer) {
+        offerService.deleteOfferById(id_offer);
     }
 }

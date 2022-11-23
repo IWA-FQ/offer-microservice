@@ -13,12 +13,11 @@ public interface OfferRepository extends JpaRepository<Offer, Integer> , CrudRep
 
      List<Offer> findAll();
 
-     List<Offer> findOffersByEmployer(String id_employeur);
+     List<Offer> findOffersByIdEmployer(Integer id_employer);
 
      Offer findOfferById(Integer id_offer);
 
      Offer save(Offer offer);
 
-     @Override
-     void deleteById(Integer integer);
+     void deleteOfferById(Integer id_offer);
 }
