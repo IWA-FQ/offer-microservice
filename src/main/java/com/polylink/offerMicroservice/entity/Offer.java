@@ -31,7 +31,40 @@ public class Offer {
     @Column(name = "advantage")
     private String advantage;
     @Column(name = "id_employer")
-    private Integer idEmployer;
+    private Long idEmployer;
+
+    public Offer() {
+
+    }
+
+    public Offer(Integer id, String title, String description, Date start_date, Date end_date, String keywords, String city, Integer city_code, Integer nb_positions, Double salary, String advantage, Long idEmployer) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.start_date = start_date;
+        this.end_date = end_date;
+        this.keywords = keywords;
+        this.city = city;
+        this.city_code = city_code;
+        this.nb_positions = nb_positions;
+        this.salary = salary;
+        this.advantage = advantage;
+        this.idEmployer = idEmployer;
+    }
+
+    public Offer(String title, String description, Date start_date, Date end_date, String keywords, String city, Integer city_code, Integer nb_positions, Double salary, String advantage, Long idEmployer) {
+        this.title = title;
+        this.description = description;
+        this.start_date = start_date;
+        this.end_date = end_date;
+        this.keywords = keywords;
+        this.city = city;
+        this.city_code = city_code;
+        this.nb_positions = nb_positions;
+        this.salary = salary;
+        this.advantage = advantage;
+        this.idEmployer = idEmployer;
+    }
 
     public Integer getId() {
         return id;
@@ -41,11 +74,11 @@ public class Offer {
         this.id = id;
     }
 
-    public Integer getIdEmployer() {
+    public Long getIdEmployer() {
         return idEmployer;
     }
 
-    public void setIdEmployer(Integer idEmployer) {
+    public void setIdEmployer(Long idEmployer) {
         this.idEmployer = idEmployer;
     }
 

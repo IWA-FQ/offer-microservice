@@ -1,5 +1,6 @@
 package com.polylink.offerMicroservice.services;
 
+import com.polylink.offerMicroservice.dto.CreateOfferDTO;
 import com.polylink.offerMicroservice.entity.Offer;
 import com.polylink.offerMicroservice.repositories.OfferRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class OfferService {
      * @param id_employer
      * @return all the offers created by an employer
      */
-    public List<Offer> getAllOffersByEmployer(Integer id_employer) {
+    public List<Offer> getAllOffersByEmployer(Long id_employer) {
         return offerRepository.findOffersByIdEmployer(id_employer);
     }
 
@@ -42,7 +43,14 @@ public class OfferService {
      *
      * @param offer
      */
-    public void updateOffer(Offer offer){
+    public void createOffer(CreateOfferDTO offerDTO,Long idEmployee){
+        Offer offer = offerDTO.offerDTO(idEmployee);
+        System.out.println(offer);
+
+        offerRepository.save(offer);
+    }
+    public void updateOffer(Integer idOffer,CreateOfferDTO offerDTO,Long idEmployee){
+        Offer offer = offerDTO.offerDTO(idOffer,idEmployee);
         offerRepository.save(offer);
     }
 
